@@ -69,6 +69,3 @@ htmlcov/
 # Jupyter Notebook
 # =====================
 .ipynb_checkpoints/
-
-# Redis local files
-redis/
