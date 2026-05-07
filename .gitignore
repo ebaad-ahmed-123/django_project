@@ -1,0 +1,74 @@
+# =====================
+# Python
+# =====================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv/
+
+# =====================
+# Django
+# =====================
+*.log
+db.sqlite3
+/media/
+/staticfiles/
+staticfiles/
+
+# Migrations (optional - only if you want clean repo)
+# */migrations/*.py
+# !*/migrations/__init__.py
+
+# =====================
+# Environment Variables
+# =====================
+.env
+.env.local
+.env.*
+
+# =====================
+# IDE / Editor
+# =====================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# =====================
+# OS files
+# =====================
+.DS_Store
+Thumbs.db
+
+# =====================
+# Celery / Redis
+# =====================
+celerybeat-schedule
+celerybeat.pid
+
+# =====================
+# Testing / Coverage
+# =====================
+htmlcov/
+.coverage
+*.cover
+
+# =====================
+# Pytest
+# =====================
+.pytest_cache/
+
+# =====================
+# Jupyter Notebook
+# =====================
+.ipynb_checkpoints/
+
+# Redis local files
+redis/
