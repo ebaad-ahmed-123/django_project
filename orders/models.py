@@ -8,8 +8,15 @@ class Order(models.Model):
       (PENDING, 'Pending'),
       (CONFIRMED, 'Confirmed'),
   ]
+
   customer = models.ForeignKey('users.User', on_delete=models.CASCADE, related_name='orders')
-  status = models.CharField(max_length=20, choices=STATUS_CHOICES, default=PENDING)
+  status = models.CharField(max_length=20, choices=STATUS_CHOICES, default=PENDING,)
+  
+  class Meta:
+      indexes = [
+        models.Index(fields=['status']),
+        models.Index(fields=['customer', 'status'])
+      ]
 
 class OrderItem(models.Model):
   order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name='items')

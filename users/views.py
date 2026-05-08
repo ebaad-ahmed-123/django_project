@@ -13,19 +13,25 @@ class UserViewSet(viewsets.ModelViewSet):
 
   def get_queryset(self):
     user = self.request.user
+    
     if not user.is_authenticated:
       return User.objects.none()
+    
     if user.is_superuser:
       return User.objects.all()
+    
     return User.objects.filter(id=user.id)
 
   def get_permissions(self):
     if self.action == 'create':
       return [IsAdmin()]
+    
     elif self.action in ['list']:
       return [IsAuthenticated(), IsAdmin()]  
+    
     elif self.action in ['retrieve', 'update', 'partial_update']:
       return [IsAuthenticated()]  
+    
     return [IsAuthenticated(), IsAdmin()]
   
   filterset_fields = ['email', 'name']
