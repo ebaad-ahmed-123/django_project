@@ -1,0 +1,133 @@
+/* VendorDashboard.css */
+.dashboard-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: sans-serif;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Header section with Title and Create Button */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #e9ecef;
+  padding-bottom: 20px;
+  margin-bottom: 25px;
+}
+
+.dashboard-title {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 1.8rem;
+}
+
+.btn-create {
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-create:hover {
+  background-color: #27ae60;
+}
+
+.btn-create:active {
+  transform: scale(0.98);
+}
+
+/* Table layout for products */
+.inventory-list {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+}
+
+/* Replace your existing inventory-header-row and inventory-row with this: */
+.inventory-header-row,
+.inventory-row {
+  display: grid;
+  /* THE FIX: Added a 100px 4th column specifically for the Delete button */
+  grid-template-columns: 2fr 1fr 1fr 100px; 
+  padding: 15px 20px;
+  align-items: center;
+}
+
+.inventory-row {
+  border-bottom: 1px solid #f1f3f5;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.inventory-row:hover {
+  background-color: #f8fafc;
+}
+
+.inventory-row:last-child {
+  border-bottom: none;
+}
+
+.inventory-row:hover {
+  background-color: #f8fafc;
+}
+
+.col-name {
+  font-weight: 600;
+}
+
+.col-price {
+  color: #2b6cb0;
+  font-weight: 600;
+}
+
+.col-stock {
+  font-weight: 500;
+}
+
+.low-stock {
+  color: #e53e3e;
+  font-weight: bold;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  color: #718096;
+}
+
+/* Wrapper to perfectly center the row and the delete button side-by-side */
+.inventory-header-row,
+.inventory-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 120px;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.btn-delete {
+  justify-self: center;
+  background-color: #e53e3e;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.btn-delete:hover {
+  background-color: #c53030;
+}

@@ -1,0 +1,16 @@
+Cart Button
+Foreign Key Relations
+API Services
+useCallback/memo
+formik ()
+
+pagination
+Smaller Components in UI folder, i.e InputField, Button, SelectField
+
+toast-notifications
+
+
+
+- Move error of field into InputField
+- Celery (Create 10 products per minute using faker)
+- pytest
