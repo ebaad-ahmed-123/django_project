@@ -1,0 +1,44 @@
+/* SearchBar.css */
+.search-container {
+  display: flex;
+  align-items: center;
+  width: 100%;          /* ADD THIS LINE */
+  max-width: 500px;     /* Keeps it from expanding past 500px */
+  margin: 0 auto;       /* Safe fallback centering */
+  position: relative;
+}
+
+.search-input {
+  align-items: center;
+  width: 100%;          /* ADD THIS LINE */
+  max-width: 300px;     /* Keeps it from expanding past 500px */
+  margin: 0 auto;       /* Safe fallback centering */
+  position: relative;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 30px; /* Nice pill-shaped search bar */
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.search-input:focus {
+  border-color: #3498db;
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.15);
+}
+
+.search-clear-btn {
+  position: absolute;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #a0aec0;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.search-clear-btn:hover {
+  color: #e53e3e; /* Turns red when hovering over the X */
+}

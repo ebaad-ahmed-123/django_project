@@ -1,0 +1,86 @@
+# ==========================================
+# PYTHON CORE
+# ==========================================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+.Python
+
+# ==========================================
+# VIRTUAL ENVIRONMENTS
+# ==========================================
+venv/
+env/
+ENV/
+.venv/
+.tox/
+
+# ==========================================
+# DJANGO SPECIFIC
+# ==========================================
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Media and Static Files
+# (Using leading slashes ensures it only ignores the root folders, 
+# not accidentally ignoring a subfolder named 'media' somewhere else)
+/media/
+/staticfiles/
+/static/
+
+# Migrations
+# (Best practice is to keep migrations tracked in Git, so these remain commented out. 
+# Only uncomment if you strictly do not want to track database history).
+# */migrations/*.py
+# !*/migrations/__init__.py
+
+# ==========================================
+# SECRETS & ENVIRONMENT VARIABLES
+# ==========================================
+.env
+.env.local
+.env.*
+.envrc
+
+# ==========================================
+# IDE & EDITORS
+# ==========================================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ==========================================
+# OS GENERATED FILES
+# ==========================================
+.DS_Store
+.DS_Store?
+Thumbs.db
+ehthumbs.db
+
+# ==========================================
+# CELERY & REDIS
+# ==========================================
+celerybeat-schedule
+celerybeat.pid
+redis/
+
+# ==========================================
+# TESTING & COVERAGE
+# ==========================================
+htmlcov/
+.coverage
+.coverage.*
+*.cover
+.pytest_cache/
+
+# ==========================================
+# JUPYTER NOTEBOOKS
+# ==========================================
+.ipynb_checkpoints/
+
+node_modules/
